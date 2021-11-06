@@ -1,3 +1,3 @@
-# Syksy 2021
+# Ohtu kevät 2021
 
-Laskareissa käytettävä Python-koodi.
+Viikko 1 tehty
