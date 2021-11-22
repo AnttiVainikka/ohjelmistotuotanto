@@ -1,4 +1,5 @@
 from entities.user import User
+import sys, pdb
 
 
 class UserInputError(Exception):
@@ -36,5 +37,22 @@ class UserService:
     def validate(self, username, password):
         if not username or not password:
             raise UserInputError("Username and password are required")
+        
+        if len(username) < 3:
+            raise Exception(
+                f"Username too short"
+            )
 
+        if len(password) < 8:
+            raise Exception(
+                f"Password too short"
+            )
+        passable = False
+        for merkki in password:
+            if merkki in ["1","2","3","4","5","6","7","8","9"]:
+                passable = True
+        if not passable:
+            raise Exception(
+                f"Password doesn't contain numbers"
+            )
         # toteuta loput tarkastukset tänne ja nosta virhe virhetilanteissa
