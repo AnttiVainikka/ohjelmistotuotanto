@@ -5,7 +5,7 @@ class Kauppa:
         self._yhteishinta = 0
 
     def aloita_ostokset(self):
-        self._yhteishinta = 0
+        self._yhteishinta = 5
 
     def lisaa_ostos(self, hinta):
         self._yhteishinta = self._yhteishinta + hinta
