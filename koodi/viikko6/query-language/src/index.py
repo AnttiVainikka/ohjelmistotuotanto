@@ -3,7 +3,7 @@ from player_reader import PlayerReader
 from matchers import And, HasAtLeast, PlaysIn
 
 def main():
-    url = "https://nhlstatisticsforohtu.herokuapp.com/players.txt"
+    url = "http://nhlstatisticsforohtu.herokuapp.com/players.txt"
     reader = PlayerReader(url)
     stats = Statistics(reader)
 
